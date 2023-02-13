@@ -1,0 +1,76 @@
+:root{
+    --primary-color: #404040;
+    --primary-text-color: #f2f2f2;
+    --second-color: #262626;
+    --second-text-color: #bfbfbf;
+    --third-color: #0d0d0d;
+}
+body.light{
+    --primary-color: #f2f2f2;
+    --primary-text-color: #0d0d0d;
+    --second-color: #bfbfbf;
+    --second-text-color: #404040;
+    --third-color: #8c8c8c;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+    background-color: var(--primary-color);
+}
+a {
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+}
+#nav p {
+    color: var(--primary-text-color);
+    font-family: "Comic Sans MS", "Comic Sans";
+    font-weight: 300;
+    height: 64px;
+    font-size: 32px;
+    margin: 8px 0 auto 0;
+    cursor: pointer;
+}
+a:hover p, p:hover{
+    color: var(--second-text-color)!important;
+    text-decoration: underline;
+}
+#nav {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background-color: var(--second-color);
+}
+#nav a img {
+    margin: 7px 4px auto 8px;
+    height: 48px;
+    aspect-ratio: 1 / 1;
+    border-radius: 64px;
+    box-shadow: -3px 2px 4px var(--third-color);
+}
+#author {
+    margin: 0 16px auto auto;
+}
+#settings {
+    margin: 0 12px auto 0;
+}
+
+#cont {
+    position: absolute;
+    top: 80px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
