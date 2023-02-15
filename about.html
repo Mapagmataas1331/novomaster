@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="author" content="Author">
-    <meta name="description" content="Author's Page">
-    <meta name="keywords" content="Author">
+    <meta name="about" content="about">
+    <meta name="description" content="about's Page">
+    <meta name="keywords" content="about">
 
     <link rel="icon" type="image/png" href="src/img/icon.png">
     <link rel="stylesheet" href="src/css/main.css">
@@ -18,9 +18,9 @@
             <img src="src/img/icon.png" alt="icon">
             <p id="langMaster">aster</p>
         </a>
-        <a id="author" href="about.html">
+        <a id="about" href="about.html">
             <div>
-                <p id="langAuthor">Author</p>
+                <p id="langAbout">About</p>
             </div>
         </a>
         <div id="settings">
@@ -28,6 +28,7 @@
         </div>
     </div>
     <div id="settingsMenu" style="display: none;">
+        <h1 id="langSettingsTitle">Settings</h1>
         <div class="settingsParam">
             <p id="langLanguage">Language:</p>
             <div id="langEnglish" onclick="changeLang(0)" class="cur">English</div>
@@ -39,9 +40,26 @@
             <div id="langLight" onclick="changeTheme(1)">Light</div>
         </div>
     </div>
-    <div id="cont">
-
-        <title>Author</title>
+    <div class="cont" id="about-cont">
+        <title>About</title>
+        <div id="firstAbout-block">
+            <img src="src/img/profilePicture.png">
+            <div>
+                <h1 id="langName">Surname Firstname</h1>
+                <p>many many many many many many many many many many many many information about author</p>
+                <p>many many many many many many many many many many many more information about author</p>
+            </div>
+        </div>
+        <div id="secondAbout-block">
+            <div>
+                <h1 id="langAdditional">Additional information</h1>
+                <p>many many many many many many many many many many many many many many many many many 
+                    many many many many many many many many many many many many many many many many many 
+                    many many many many many many many many many many many many many many additional information</p>
+            </div>
+        </div>
+    </div>
+    <div id="thirdAbout-block">
 
     </div>
     <script src="src/js/main.js"></script>

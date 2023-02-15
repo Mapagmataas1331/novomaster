@@ -10,14 +10,17 @@ document.getElementById("settings").addEventListener("click", () => {
 function changeLang(v) {
     const eng = document.getElementById("langEnglish");
     const rus = document.getElementById("langRussian");
-    const elemsArr = ["langMaster", "langAuthor", "langSettings", "langLanguage", "langEnglish", "langRussian", "langTheme", "langDark", "langLight"];
+    const elemsArr = ["langMaster", "langAbout", "langSettings", "langSettingsTitle", "langLanguage", "langEnglish", "langRussian",
+    "langTheme", "langDark", "langLight", "langName", "langAdditional"];
     var langArr;
     if (!v) {
-        langArr = ["aster", "Author", "Settings", "Language:", "English", "Russian", "Theme:", "Dark", "Light"];
+        langArr = ["aster", "About", "Settings", "Settings", "Language:", "English", "Russian",
+        "Theme:", "Dark", "Light", "Surname Firstname", "Additional information"];
         eng.classList.add("cur");
         rus.classList.remove("cur");
     } else {
-        langArr = ["астер", "Автор", "Настройки", "Язык:", "Английский", "Русский", "Тема:", "Тёмная", "Светлая"];
+        langArr = ["астер", "Информация", "Настройки", "Настройки", "Язык:", "Английский", "Русский",
+        "Тема:", "Тёмная", "Светлая", "Фамилия Имя", "Дополнительная информация"];
         eng.classList.remove("cur");
         rus.classList.add("cur");
     }

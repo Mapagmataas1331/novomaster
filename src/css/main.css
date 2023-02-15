@@ -1,3 +1,4 @@
+/* Создание переменных */
 :root{
     --primary-color: #404040;
     --primary-text-color: #f2f2f2;
@@ -5,6 +6,8 @@
     --second-text-color: #bfbfbf;
     --third-color: #0d0d0d;
 }
+/* Изменение переменных если
+у "body" есть класс "light" */
 body.light{
     --primary-color: #f2f2f2;
     --primary-text-color: #0d0d0d;
@@ -12,10 +15,23 @@ body.light{
     --second-text-color: #404040;
     --third-color: #8c8c8c;
 }
+/* Класс для того чтобы
+сделать элемент невыделяемым */
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* У всех элементов убираем
+внутренние и внешние отступы */
 * {
     margin: 0;
     padding: 0;
 }
+/* Убираем нижний скрол */
 body {
     overflow-x: hidden;
     background-color: var(--primary-color);
@@ -25,6 +41,7 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+/* Верхняя навигация */
 #nav p {
     color: var(--primary-text-color);
     font-family: "Comic Sans MS", "Comic Sans";
@@ -34,6 +51,7 @@ a {
     margin: 8px 0 auto 0;
     cursor: pointer;
 }
+/* Когда курсор на элементе - ":hover" */
 #nav a:hover p, #nav p:hover{
     color: var(--second-text-color)!important;
     text-decoration: underline;
@@ -54,28 +72,40 @@ a {
     border-radius: 64px;
     box-shadow: -3px 2px 4px var(--third-color);
 }
-#author {
+#about {
     margin: 0 16px auto auto;
 }
 #settings {
     margin: 0 12px auto 0;
 }
-#settingsMenu, #cont {
+/* Меню настроек */
+#settingsMenu, .cont {
     position: absolute;
     top: 64px;
     width: 95vw;
     margin: 2.5vw;
+    color: var(--primary-text-color);
+    font-family: 'Qanelas-UltraLight', sans-serif;
 }
 #settingsMenu {
+    height: calc(100vh - 5vw - 64px);
     background-color: var(--second-color);
     color: var(--second-text-color);
     border-radius: 8px;
     box-shadow: -6px 4px 8px var(--third-color);
-    font-family: 'Qanelas-UltraLight', sans-serif;
     font-size: 20px;
+    font-weight: 100;
+    z-index: 1;
 }
+#settingsMenu h1 {
+    margin-top: 1.25vw;
+    text-align: center;
+}
+/* Класс для выбранного элемента */
 .cur {
     color: var(--primary-text-color);
+    font-size: 24px;
+    font-weight: 300;
 }
 .settingsParam {
     display: flex;
@@ -92,12 +122,59 @@ a {
 .settingsParam div:first-of-type {
     margin-right: 1.25vw;
 }
+/* Контент на странице "index" */
 
-.noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+/* Контент на странице "author" */
+#about-cont {
+    display: flex;
+}
+#firstAbout-block, #secondAbout-block {
+    width: 46.25vw;
+}
+#firstAbout-block {
+    display: flex;
+    margin: 0 2.5vw 0 0;
+}
+#firstAbout-block img {
+    width: 30%;
+    margin: 2.5%;
+}
+#firstAbout-block div {
+    width: 65%;
+    margin: 2.5%;
+}
+#about-cont h1 {
+    margin-bottom: 2.5vw;
+}
+#about-cont p {
+    margin-bottom: 1.25vw;
+}
+#secondAbout-block div{
+    margin: 2.5%;
+}
+#thirdAbout-block {
+    width: 95vw;
+}
+/* Адаптив */
+@media screen and (min-width: 1281px) {
+    #about-cont {
+        display: flex;
+    }
+    #firstAbout-block, #secondAbout-block {
+        width: 46.25vw;
+    }
+    #firstAbout-block {
+        margin: 0 2.5vw 0 0;
+    }
+}
+@media screen and (max-width: 1280px) {
+    #about-cont {
+        display: block;
+    }
+    #firstAbout-block, #secondAbout-block {
+        width: 95vw;
+    }
+    #firstAbout-block {
+        margin: 0 0 2.5vw 0;
+    }
 }
