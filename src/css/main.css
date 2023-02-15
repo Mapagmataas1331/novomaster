@@ -34,7 +34,7 @@ a {
     margin: 8px 0 auto 0;
     cursor: pointer;
 }
-a:hover p, p:hover{
+#nav a:hover p, #nav p:hover{
     color: var(--second-text-color)!important;
     text-decoration: underline;
 }
@@ -60,10 +60,37 @@ a:hover p, p:hover{
 #settings {
     margin: 0 12px auto 0;
 }
-
-#cont {
+#settingsMenu, #cont {
     position: absolute;
-    top: 80px;
+    top: 64px;
+    width: 95vw;
+    margin: 2.5vw;
+}
+#settingsMenu {
+    background-color: var(--second-color);
+    color: var(--second-text-color);
+    border-radius: 8px;
+    box-shadow: -6px 4px 8px var(--third-color);
+    font-family: 'Qanelas-UltraLight', sans-serif;
+    font-size: 20px;
+}
+.cur {
+    color: var(--primary-text-color);
+}
+.settingsParam {
+    display: flex;
+    width: 90vw;
+    margin: 2.5vw;
+}
+.settingsParam p {
+    margin-right: 2.5vw;
+}
+.settingsParam div:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.settingsParam div:first-of-type {
+    margin-right: 1.25vw;
 }
 
 .noselect {
