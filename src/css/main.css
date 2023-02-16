@@ -37,11 +37,14 @@ body {
     background-color: var(--primary-color);
 }
 a {
-    display: flex;
     text-decoration: none;
     cursor: pointer;
+    color: var(--primary-text-color);
 }
 /* Верхняя навигация */
+#nav a {
+    display: flex;
+}
 #nav p {
     color: var(--primary-text-color);
     font-family: "Comic Sans MS", "Comic Sans";
@@ -52,7 +55,7 @@ a {
     cursor: pointer;
 }
 /* Когда курсор на элементе - ":hover" */
-#nav a:hover p, #nav p:hover{
+#nav a:hover p, #nav p:hover, #index-cont a:hover h1{
     color: var(--second-text-color)!important;
     text-decoration: underline;
 }
@@ -123,7 +126,20 @@ a {
     margin-right: 1.25vw;
 }
 /* Контент на странице "index" */
-
+#langCurProj {
+    text-align: center;
+    margin: 0!important;
+}
+#index-cont img {
+    width: 90vw;
+    margin: 2.5vw;
+}
+#index-cont h1 {
+    margin: 0 2.5vw 2.5vw 2.5vw;
+}
+#index-cont p {
+    margin: 0 5vw 5vw 5vw;
+}
 /* Контент на странице "author" */
 #about-cont {
     display: flex;
@@ -153,7 +169,14 @@ a {
     margin: 2.5%;
 }
 #thirdAbout-block {
+    margin-top: 5vw;
     width: 95vw;
+}
+#thirdAbout-block h1 {
+    margin-left: 2.5vw;
+}
+#thirdAbout-block p {
+    margin-top: 1.25vw;
 }
 /* Адаптив */
 @media screen and (min-width: 1281px) {
